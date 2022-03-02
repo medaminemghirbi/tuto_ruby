@@ -1,7 +1,8 @@
-class PagesController <ApplicationController
-def salut 
+# Classe de la pge controller
+class PagesController < ApplicationController
+  def salut
     @name = params[:name]
+  end
+
+  def home; end
 end
-def home
-end
-end 
