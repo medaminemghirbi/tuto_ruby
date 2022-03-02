@@ -1,0 +1,24 @@
+common: &common
+ adapter: postgresql
+ host:    localhost
+ encoding: unicode
+ pool: 5
+ username: postgres # OR your username
+ password: postgres
+ schema_search_path: "public,hstore,uuid"
+development:
+ <<: *common
+ database: tuto # OR your database name
+dev_it:
+ <<: *common
+ database: tuto # OR your database name
+staging:
+ <<: *common
+ database: tuto # OR your database name
+production:
+ <<: *common
+ database: tuto # OR your database name
+test:
+ <<: *common
+ database: tuto # OR your database name
+ min_messages: WARNING
